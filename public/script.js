@@ -7,6 +7,22 @@ var peer = new Peer(undefined, {
 });
 
 const user = prompt("Enter your name");
+const myVideo= document.createElement("video");  //crate vide element
+myVideo.muted = true;  // mute by default
+
+let myStream;  //contains audio & video stream
+
+//get audio and video and store it in our variables myStream
+navigator.mediaDevices
+    .getUserMedia({
+        audio: true,
+        video: true,
+    })
+    .then((stream) => {
+        myStream = stream;  //gets stream and stores
+        addVideoStream(myVideo, stream);  //display everyones stream
+    })
+
 
 $(function () {
     $("#show_chat").click(function () {
