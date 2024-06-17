@@ -99,6 +99,7 @@
   left: 28px;
   color: #fff;
 }
+
 #video_grid {
   flex-grow: 1;
   display: flex;
@@ -117,6 +118,10 @@ video {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
+}
+
+.background_red {
+  background-color: #f6484a;
 }
 
 @media (max-width: 700px) {
