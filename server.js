@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     auth: {
         user: 'nalini.s@byjusteachers.com',
-        pass: 'afod iynh lnqs bdjk',
+        pass: 'afodiynhlnqsbdjk',
     },
     secure: true,
 });
@@ -41,6 +41,7 @@ app.get("/:room", (req, res) => {
 });
 
 app.post("/send-mail", (req, res) => {
+    console.log ("POST REQUEST")
     const to = req.body.to;
     const url = req.body.url;
     const mailData = {
