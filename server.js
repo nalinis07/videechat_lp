@@ -44,11 +44,12 @@ app.post("/send-mail", (req, res) => {
     const to = req.body.to;
     const url = req.body.url;
     const mailData = {
-        from: "nalinis07@gmailcom",
+        from: "nalini.s@byjusteachers.com",
         to: to,
         subject: "Join the video chat with me!",
         html: `<p>Hey there,</p><p>Come and join me for a video chat here - ${url}</p>`
     };
+    console.log ("Post : ", mailData)
     transporter.sendMail(mailData, (error, info) => {
         if (error) {
             return console.log(error);
