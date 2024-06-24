@@ -48,8 +48,8 @@ app.post("/send-mail", (req, res) => {
         from: "nalinis07@gmail.com",
         to: to,
         subject: "Join the video chat with me!",
-        text: 'This is a plain text email'
-      
+        text: 'This is a plain text email',
+        html: `<p>Hey there,</p><p>Come and join me for a video chat here - ${url}</p>`      
     };
     console.log ("Post : ", mailData)
     transporter.sendMail(mailData, (error, info) => {
