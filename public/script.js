@@ -113,6 +113,7 @@ $(function () {
             url: window.location.href,
             to: to
         }
+        console.log ("url , to :", data.url, data.to)
         $.ajax({
             url: "/send-mail",
             type: "post",
